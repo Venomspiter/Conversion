@@ -4,9 +4,23 @@
     <title>Miles Away</title>
   </head>
   <body>
-
+ <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="home.html">CSA</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li {% if active_Page == "milesToKilos" %} class = "active" {% endif %}><a href="Miles To Kilometers">CompArt</a></li>
+        <li {% if active_Page == "kilosToMiles" %} class = "active" {% endif %}><a href="Kilometers To Miles">ECS</a></li> <!-- p1 will show up in the url -->
+        <li {% if active_Page == "milesToMeters" %} class = "active" {% endif %}><a href="Miles To Meters">APCS</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="life">
     <form action='/response'>
-      Give me a length in miles<br>
+      
+      <% block asking %>
+      <br>
       <input type="text" name="length">
       <br><br>
       <input type="submit">
