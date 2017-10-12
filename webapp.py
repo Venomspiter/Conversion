@@ -12,9 +12,9 @@ def render_response():
     #the request object stores data about the request sent to the server
     # args is a MultiDict (like a dictionary, but can store multiple values for the same key)
     # the information in args is visible in the url for the page  being requested (i.e. ... /response?color=blue)
-    if color == 'red':
+    if length == 'red':
         reply = "gg"
-    else if color == 'blue':
+    else if length == 'blue':
         reply = "Get good red is the true A1 color."
     return render_template('response.html', response = reply)
 if __name__=="__main__":
