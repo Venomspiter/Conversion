@@ -15,13 +15,13 @@ def render_response():
     return render_template('response.html', response = reply)
 if __name__=="__main__":
     app.run(debug=False, port=54321)
-@app.route("/me2mi")
+@app.route("/metersToMiles")
 def render_page1():
     return render_template('meterToMiles.html')
 
-@app.route("/mi2k")
+@app.route("/milesToKilometer")
 def render_page2():
     return render_template('mileToKilos.html')
-@app.route("/k2mi")
+@app.route("/kilometersToMiles")
 def render_page3():
     return render_template('kilosToMiles.html')
