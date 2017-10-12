@@ -9,14 +9,21 @@
         <div class="navbar-header">
         </div>
         <ul class="nav navbar-nav">
-          <li <a href=".">home</a></li>
-          <li <a href="milesToKilos.html">milesToKilos</a></li>
-          <li <a href="kilosToMiles.html">kilosToMiles</a></li> 
-          <li <a href="metersToMiles.html">metersToMiles</a></li>
+          <li {% if active_Page == "milesToKilos" %} class = "active" {% endif %}><a href="mi2k">milesToKilos</a></li>
+          <li {% if active_Page == "kilosToMiles" %} class = "active" {% endif %}><a href="k2mi">kilosToMiles</a></li> 
+          <li {% if active_Page == "metersToMiles" %} class = "active" {% endif %}><a href="me2mi">metersToMiles</a></li>
           </ul>
       </div>
     </nav>
     <div class="life">
     <form action='/response'>
+      
+      <% blockasking %>
+      <br>
+      <input type="text" name="length">
+      <br><br>
+      <input type="submit">
+    </form>
+
   </body>
 </html>
