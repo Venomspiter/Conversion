@@ -19,9 +19,9 @@ if __name__=="__main__":
 def render_page1():
     return render_template('meterToMiles.html')
 
-@app.route("/milesToKilometer")
+@app.route("/milesToKilos")
 def render_page2():
-    return render_template('mileToKilos.html')
-@app.route("/kilometersToMiles")
+    return render_template('milesToKilos.html')
+@app.route("/kilosToMiles")
 def render_page3():
     return render_template('kilosToMiles.html')
