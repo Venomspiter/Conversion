@@ -10,13 +10,13 @@ def render_main():
 def render_response():
     length = Float(request.args['length'])
    if active_Page == "milesToKilos"{
-       reply = length * 1.60934
+       reply = "your new length is" +length * 1.60934 +"."
    }
     else if active_Page == "kilosToMiles"{
-       reply = length * 0.621371
+       reply = "your new length is" +length * 0.621371 +"."
    }
     else if active_Page == "metersToMiles"{
-       reply = length * .0006213709999975145
+       reply ="your new length is" + length * .0006213709999975145 +"."
    }
     return render_template('response.html', response = reply)
 if __name__=="__main__":
