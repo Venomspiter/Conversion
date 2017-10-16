@@ -8,10 +8,16 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    length = request.args['length']
-    #the request object stores data about the request sent to the server
-    # args is a MultiDict (like a dictionary, but can store multiple values for the same key)
-    # the information in args is visible in the url for the page  being requested (i.e. ... /response?color=blue)
+    length = Float(request.args['length'])
+   if active_Page == "milesToKilos"{
+       reply = length * 1.60934
+   }
+    else if active_Page == "kilosToMiles"{
+       reply = length * 0.621371
+   }
+    else if active_Page == "metersToMiles"{
+       reply = length * .0006213709999975145
+   }
     return render_template('response.html', response = reply)
 if __name__=="__main__":
     app.run(debug=True, port=54321)
