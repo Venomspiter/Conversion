@@ -8,14 +8,14 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    length = float(request.args['length'])
-   if active_Page == "milesToKilos"{
+    length = float(request.args['length','apage'])
+   if apage == "milesToKilos"{
        reply = "your new length is" +length * 1.60934 +"."
    }
-   if active_Page == "kilosToMiles"{
+   if apage == "kilosToMiles"{
        reply = "your new length is" +length * 0.621371 +"."
    }
-    if active_Page == "metersToMiles"{
+    if apage == "metersToMiles"{
        reply ="your new length is" + length * .0006213709999975145 +"."
    }
     return render_template('templates/response.html', response = reply)
