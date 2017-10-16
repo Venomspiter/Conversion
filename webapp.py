@@ -12,10 +12,10 @@ def render_response():
    if active_Page == "milesToKilos"{
        reply = "your new length is" +length * 1.60934 +"."
    }
-    else if active_Page == "kilosToMiles"{
+   if active_Page == "kilosToMiles"{
        reply = "your new length is" +length * 0.621371 +"."
    }
-    else if active_Page == "metersToMiles"{
+    if active_Page == "metersToMiles"{
        reply ="your new length is" + length * .0006213709999975145 +"."
    }
     return render_template('response.html', response = reply)
