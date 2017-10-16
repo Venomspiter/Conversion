@@ -10,17 +10,17 @@ def render_main():
 def render_response():
     length = float(request.args['length','apage'])
    if apage == "milesToKilos"{
-       reply = "your new length is" +length * 1.60934 +"."
+       reply = "your new length is" + length * 1.60934 + "."
    }
    if apage == "kilosToMiles"{
-       reply = "your new length is" +length * 0.621371 +"."
+       reply = "your new length is" + length * 0.621371 + "."
    }
     if apage == "metersToMiles"{
-       reply ="your new length is" + length * .0006213709999975145 +"."
+       reply = "your new length is" + length * .0006213709999975145 + "."
    }
     return render_template('templates/response.html', response = reply)
 if __name__=="__main__":
-    app.run(debug=True, port=54321)
+    app.run(debug=False, port=54321)
 @app.route("/metersToMiles")
 def render_page1():
     return render_template('metersToMiles.html')
