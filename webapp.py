@@ -17,7 +17,7 @@ if __name__=="__main__":
     app.run(debug=True, port=54321)
 @app.route("/metersToMiles")
 def render_page1():
-    return render_template('meterToMiles.html')
+    return render_template('metersToMiles.html')
 
 @app.route("/milesToKilos")
 def render_page2():
