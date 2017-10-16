@@ -18,7 +18,7 @@ def render_response():
     if active_Page == "metersToMiles"{
        reply ="your new length is" + length * .0006213709999975145 +"."
    }
-    return render_template('response.html', response = reply)
+    return render_template('templates/response.html', response = reply)
 if __name__=="__main__":
     app.run(debug=True, port=54321)
 @app.route("/metersToMiles")
