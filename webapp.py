@@ -8,9 +8,8 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    length = float(request.args['length'])
-    if apage == "metersToMiles":
-        reply = "your new length is" + length + "."
+    length = Float(request.args['length'])
+    reply = "your new length is" + length + "."
     return render_template('templates/response.html', response = reply)
 @app.route("/metersToMiles")
 def render_page1():
