@@ -10,7 +10,7 @@ def render_main():
 def render_response():
     length = Float(request.args['length'])
     reply = "your new length is" + length + "."
-    return render_template('templates/response.html', response = reply)
+    return render_template('response.html', response = reply)
 @app.route("/metersToMiles")
 def render_page1():
     return render_template('metersToMiles.html')
