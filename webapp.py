@@ -5,6 +5,12 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 @app.route("/")
 def render_main():
     return render_template('index.html')
+
+@app.route("/response")
+def render_response():
+    length = Float(request.args['length'])
+    reply = "your new length is" + length + "."
+    return render_template('response.html', response = reply)
 @app.route("/metersToMiles")
 def render_page1():
     length = Float(request.args['length']* .00062137)
