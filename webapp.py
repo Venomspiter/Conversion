@@ -14,7 +14,6 @@ def render_response():
 @app.route("/metersToMiles")
 def render_page1():
     return render_template('metersToMiles.html')
-
 @app.route("/milesToKilos")
 def render_page2():
     return render_template('milesToKilos.html')
