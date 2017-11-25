@@ -24,9 +24,7 @@
       <input type="text" name="length">
       <br><br>
       <input type="submit">
-      {% if active_Page == "milesToKilos" %}length = float(length) * 1.60934 {% endif %}
-    {% if active_Page == "kilosToMiles" %}length = float(length) *  0.621371 {% endif %}
-    {% if active_Page == "metersToMiles" %}length = float(length) * .00062137 {% endif %}
     </form>
+      <p>{{response}}</p>
   </body>
 </html>
