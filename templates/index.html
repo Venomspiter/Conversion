@@ -10,9 +10,9 @@
         <div class="navbar-header">
         </div>
         <ul class="nav navbar-nav">
-          <li {% if active_Page == "milesToKilos" %} class = "active" {% endif %}><a href="milesToKilos">milesToKilos</a></li>
-          <li {% if active_Page == "kilosToMiles" %} class = "active" {% endif %}><a href="kilosToMiles">kilosToMiles</a></li> 
-          <li {% if active_Page == "metersToMiles" %} class = "active" {% endif %}><a href="metersToMiles">metersToMiles</a></li>
+          <li {% if active_Page == "milesToKilos" %} class = "active" name = "m2k"{% endif %}><a href="milesToKilos">milesToKilos</a></li>
+          <li {% if active_Page == "kilosToMiles" %} class = "active" name = "k2m"{% endif %}><a href="kilosToMiles">kilosToMiles</a></li> 
+          <li {% if active_Page == "metersToMiles" %} class = "active" name = "m2m"{% endif %}><a href="metersToMiles">metersToMiles</a></li>
           </ul>
       </div>
     </nav>
@@ -26,5 +26,9 @@
       <input type="submit">
     </form>
       <p>{{response}}</p>
+      {% if active_Page == "milesToKilos" %} <p name = "checker">m2k</p>{% endif %}
+      {% if active_Page == "kilosToMiles" %} <p name = "checker">k2m</p>{% endif %}
+      {% if active_Page == "metersToMiles" %} <p name = "checker">m2m</p>{% endif %}
+      <p>
   </body>
 </html>
