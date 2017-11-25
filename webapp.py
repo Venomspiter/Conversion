@@ -8,6 +8,7 @@ def render_main():
 
 @app.route("/response")
 def render_response():
+    length = request.args['length']
      if active_Page == "milesToKilos":
         newLength = float(length) * 1.60934 	
      if active_Page == "kilosToMiles":
