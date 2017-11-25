@@ -9,11 +9,12 @@ def render_main():
 @app.route("/response")
 def render_response():
     length = request.args['length']
-     if active_Page == "milesToKilos":
+    oneOf = request.args['checker']
+     if oneOf == "m2k":
         newLength = float(length) * 1.60934 	
-     if active_Page == "kilosToMiles":
+     if oneOf == "k2m":
         newLength = float(length) *  0.621371 	
-     if active_Page == "metersToMiles":
+     if oneOf == "m2m":
         newLength = float(length) * .00062137 
     reply = "your new length is " + newLength + "."
     return render_template('response.html', response = reply)
